@@ -21,9 +21,10 @@ object Form_Main: TForm_Main
   object Splitter1: TSplitter
     Left = 377
     Top = 0
-    Width = 10
+    Width = 7
     Height = 562
     OnMoved = Splitter1Moved
+    ExplicitHeight = 544
   end
   object Panel_Left: TPanel
     Left = 0
@@ -123,19 +124,17 @@ object Form_Main: TForm_Main
     end
   end
   object Panel_Right: TPanel
-    Left = 387
+    Left = 384
     Top = 0
-    Width = 377
+    Width = 380
     Height = 562
     Align = alClient
     TabOrder = 1
-    ExplicitLeft = 384
-    ExplicitWidth = 380
     ExplicitHeight = 542
     inline Frame_Video2: TFrame1
       Left = 1
       Top = 1
-      Width = 375
+      Width = 378
       Height = 560
       Align = alClient
       TabOrder = 0
@@ -144,10 +143,10 @@ object Form_Main: TForm_Main
       ExplicitWidth = 378
       ExplicitHeight = 540
       inherited Panel_Top: TPanel
-        Width = 375
+        Width = 378
         ExplicitWidth = 374
         DesignSize = (
-          375
+          378
           104)
         inherited Label_Cameras: TLabel
           Width = 52
@@ -174,7 +173,7 @@ object Form_Main: TForm_Main
           ExplicitHeight = 13
         end
         inherited Bevel1: TBevel
-          Width = 250
+          Width = 253
         end
         inherited ComboBox_Cams: TComboBox
           Height = 21
@@ -190,12 +189,12 @@ object Form_Main: TForm_Main
         end
       end
       inherited Panel_Bottom: TPanel
-        Width = 375
+        Width = 378
         Height = 456
         ExplicitWidth = 374
         ExplicitHeight = 435
         DesignSize = (
-          375
+          378
           456)
         inherited Label_VideoSize: TLabel
           Width = 50
@@ -216,21 +215,12 @@ object Form_Main: TForm_Main
           ExplicitHeight = 13
         end
         inherited PaintBox_Video: TPaintBox
-          Width = 375
+          Width = 378
           Height = 500
           ExplicitWidth = 374
           ExplicitHeight = 499
         end
       end
     end
-  end
-  object SaveScreenBut: TButton
-    Left = 344
-    Top = 164
-    Width = 75
-    Height = 25
-    Caption = #1047#1072#1083#1091#1087#1077#1085#1094#1080#1103
-    TabOrder = 2
-    OnClick = SaveScreenButClick
   end
 end

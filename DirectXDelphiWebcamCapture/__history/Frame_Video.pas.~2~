@@ -80,7 +80,6 @@ type
     procedure InitFrame;
     procedure Stop;
     PROCEDURE Close;
-    procedure SaveImage;
   end;
 
 implementation
@@ -592,23 +591,6 @@ begin
       VP := TVideoProperty(Tag);
       VideoImage.SetVideoPropertySettings(VP, PropCtrl[VP].PCTrackbar.Position, PropCtrl[VP].PCCheckbox.Checked);
     end;
-end;
-
-procedure TFrame1.SaveImage;
-VAR
-  BMP : TBitmap;
-begin
-  BMP := TBitmap.Create;
-  BMP.Assign(VideoBMP[0]);
-
-      try
-        // Will not save the flipping. Sorry, I'm a lazy guy...
-        BMP.SaveToFile('C:\\Users\\User\\Desktop\\Delphi\\Screen\\Fisting.bmp');
-      except
-        MessageDlg('Could not save file C:\\Users\\User\\Desktop\\Delphi\\Screen\\Fisting.bmp!', mterror, [mbOK], 0);
-      end;
-
-  BMP.Free;
 end;
 
 procedure TFrame1.SpeedButton1Click(Sender: TObject);

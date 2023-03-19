@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Classes, Controls, Forms, ExtCtrls, Frame_Video, Menus,
-  StdCtrls, Vcl.Graphics;
+  StdCtrls;
 
 
 type
@@ -76,8 +76,21 @@ begin
 end;
 
 procedure TForm_Main.SaveScreenButClick(Sender: TObject);
+VAR
+  BMP : TBitmap;
 begin
-  Frame_Video1.SaveImage;
+  BMP := TBitmap.Create;
+  BMP.Assign(fVideoBitmap);
+  IF SavePictureDialog1.Execute then
+    begin
+      try
+        // Will not save the flipping. Sorry, I'm a lazy guy...
+        BMP.SaveToFile(SavePictureDialog1.FileName);
+      except
+        MessageDlg('Could not save file ' + SavePictureDialog1.FileName + '!', mterror, [mbOK], 0);
+      end;
+    end;
+  BMP.Free;
 end;
 
 procedure TForm_Main.Splitter1Moved(Sender: TObject);
