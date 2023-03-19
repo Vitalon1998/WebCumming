@@ -18,15 +18,15 @@ object Frame1: TFrame1
     object Label_Cameras: TLabel
       Left = 8
       Top = 2
-      Width = 52
-      Height = 13
+      Width = 57
+      Height = 15
       Caption = 'Camera #1'
     end
     object Label1: TLabel
       Left = 8
       Top = 40
-      Width = 63
-      Height = 13
+      Width = 72
+      Height = 15
       Caption = 'Display mode'
     end
     object SpeedButton_RunVideo: TSpeedButton
@@ -470,8 +470,8 @@ object Frame1: TFrame1
     object Label3: TLabel
       Left = 216
       Top = 40
-      Width = 51
-      Height = 13
+      Width = 55
+      Height = 15
       Caption = 'Video size '
     end
     object SpeedButton1: TSpeedButton
@@ -561,8 +561,8 @@ object Frame1: TFrame1
     object Label4: TLabel
       Left = 40
       Top = 85
-      Width = 44
-      Height = 13
+      Width = 48
+      Height = 15
       Caption = 'Settings  '
     end
     object Bevel1: TBevel
@@ -577,8 +577,7 @@ object Frame1: TFrame1
       Left = 8
       Top = 16
       Width = 193
-      Height = 21
-      ItemHeight = 13
+      Height = 23
       PopupMenu = PopupMenu1
       TabOrder = 0
       Text = 'No cameras found'
@@ -587,9 +586,8 @@ object Frame1: TFrame1
       Left = 8
       Top = 56
       Width = 193
-      Height = 21
+      Height = 23
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 1
       Items.Strings = (
         'Normal'
@@ -603,9 +601,8 @@ object Frame1: TFrame1
       Left = 216
       Top = 56
       Width = 121
-      Height = 21
+      Height = 23
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 2
       OnChange = ComboBox1Change
     end
@@ -623,22 +620,22 @@ object Frame1: TFrame1
     object Label_VideoSize: TLabel
       Left = 8
       Top = 12
-      Width = 50
-      Height = 13
+      Width = 53
+      Height = 15
       Caption = 'Video Size'
     end
     object Label_fps: TLabel
       Left = 144
       Top = 12
-      Width = 90
-      Height = 13
+      Width = 99
+      Height = 15
       Caption = 'Frames per second'
     end
     object Label2: TLabel
       Left = 296
       Top = 12
-      Width = 49
-      Height = 13
+      Width = 54
+      Height = 15
       Caption = 'Difference'
     end
     object PaintBox_Video: TPaintBox

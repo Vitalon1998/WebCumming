@@ -3,7 +3,7 @@ object Form_Main: TForm_Main
   Top = 223
   Caption = 'WebCumming'
   ClientHeight = 626
-  ClientWidth = 809
+  ClientWidth = 843
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -115,10 +115,12 @@ object Form_Main: TForm_Main
           ExplicitHeight = 13
         end
         inherited PaintBox_Video: TPaintBox
-          Width = 367
-          Height = 564
-          ExplicitWidth = 367
-          ExplicitHeight = 499
+          Top = 31
+          Width = 337
+          Height = 332
+          ExplicitTop = 31
+          ExplicitWidth = 337
+          ExplicitHeight = 332
         end
       end
     end
@@ -126,7 +128,7 @@ object Form_Main: TForm_Main
   object Panel_Right: TPanel
     Left = 384
     Top = 0
-    Width = 425
+    Width = 459
     Height = 626
     Align = alClient
     TabOrder = 1
@@ -135,7 +137,7 @@ object Form_Main: TForm_Main
     inline Frame_Video2: TFrame1
       Left = 1
       Top = 1
-      Width = 423
+      Width = 457
       Height = 624
       Align = alClient
       TabOrder = 0
@@ -144,10 +146,10 @@ object Form_Main: TForm_Main
       ExplicitWidth = 378
       ExplicitHeight = 540
       inherited Panel_Top: TPanel
-        Width = 423
+        Width = 457
         ExplicitWidth = 374
         DesignSize = (
-          423
+          457
           104)
         inherited Label_Cameras: TLabel
           Width = 52
@@ -174,7 +176,7 @@ object Form_Main: TForm_Main
           ExplicitHeight = 13
         end
         inherited Bevel1: TBevel
-          Width = 298
+          Width = 332
         end
         inherited ComboBox_Cams: TComboBox
           Height = 21
@@ -190,12 +192,12 @@ object Form_Main: TForm_Main
         end
       end
       inherited Panel_Bottom: TPanel
-        Width = 423
+        Width = 457
         Height = 520
         ExplicitWidth = 374
         ExplicitHeight = 435
         DesignSize = (
-          423
+          457
           520)
         inherited Label_VideoSize: TLabel
           Width = 50
@@ -216,10 +218,12 @@ object Form_Main: TForm_Main
           ExplicitHeight = 13
         end
         inherited PaintBox_Video: TPaintBox
-          Width = 423
-          Height = 564
-          ExplicitWidth = 374
-          ExplicitHeight = 499
+          Top = 31
+          Width = 340
+          Height = 332
+          ExplicitTop = 31
+          ExplicitWidth = 340
+          ExplicitHeight = 332
         end
       end
     end

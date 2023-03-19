@@ -6,8 +6,7 @@ interface
 
 uses
   Windows, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, ExtCtrls, StdCtrls,
-  Buttons, MMSystem, Menus, ComCtrls, JPEG,
-  VFrames;
+  Buttons, MMSystem, Menus, ComCtrls, JPEG, VFrames;
 
 type
   TPropertyControl  = RECORD
@@ -83,7 +82,6 @@ type
 implementation
 
 {$R *.dfm}
-
 
 procedure TFrame1.UpdateCamList;
 var

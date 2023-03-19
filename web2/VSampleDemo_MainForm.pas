@@ -49,8 +49,6 @@ begin
   Screen.Cursor := crdefault;
 end;
 
-
-
 procedure TForm_Main.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   Frame_Video1.Close;
