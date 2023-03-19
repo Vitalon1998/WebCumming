@@ -3,7 +3,7 @@ unit VSampleDemo_MainForm;
 interface
 
 uses
-  Windows, Classes, Controls, Forms, ExtCtrls, FormAbout, Frame_Video, Menus,
+  Windows, Classes, Controls, Forms, ExtCtrls, Frame_Video, Menus,
   StdCtrls;
 
 
@@ -18,7 +18,6 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormShow(Sender: TObject);
     procedure Quit1Click(Sender: TObject);
-    procedure About1Click(Sender: TObject);
     procedure Splitter1Moved(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormResize(Sender: TObject);
@@ -37,6 +36,11 @@ var
 implementation
 
 {$R *.dfm}
+
+
+
+
+
 
 
 procedure TForm_Main.FormCloseQuery(Sender: TObject;
@@ -67,11 +71,6 @@ end;
 procedure TForm_Main.Quit1Click(Sender: TObject);
 begin
   close;
-end;
-
-procedure TForm_Main.About1Click(Sender: TObject);
-begin
-  AboutBox.Show;
 end;
 
 procedure TForm_Main.Splitter1Moved(Sender: TObject);

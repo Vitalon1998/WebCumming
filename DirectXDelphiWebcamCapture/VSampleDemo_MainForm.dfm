@@ -1,9 +1,9 @@
 object Form_Main: TForm_Main
   Left = 392
   Top = 223
-  Caption = 'WebCumming'
-  ClientHeight = 626
-  ClientWidth = 843
+  Caption = 'VSampleDemo 3.0   [www.grizzlymotion.com]'
+  ClientHeight = 562
+  ClientWidth = 764
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,7 +22,7 @@ object Form_Main: TForm_Main
     Left = 377
     Top = 0
     Width = 7
-    Height = 626
+    Height = 562
     OnMoved = Splitter1Moved
     ExplicitHeight = 544
   end
@@ -30,7 +30,7 @@ object Form_Main: TForm_Main
     Left = 0
     Top = 0
     Width = 377
-    Height = 626
+    Height = 562
     Align = alLeft
     TabOrder = 0
     ExplicitHeight = 542
@@ -38,7 +38,7 @@ object Form_Main: TForm_Main
       Left = 1
       Top = 1
       Width = 375
-      Height = 624
+      Height = 560
       Align = alClient
       TabOrder = 0
       ExplicitLeft = 1
@@ -90,12 +90,12 @@ object Form_Main: TForm_Main
       end
       inherited Panel_Bottom: TPanel
         Width = 375
-        Height = 520
+        Height = 456
         ExplicitWidth = 375
         ExplicitHeight = 435
         DesignSize = (
           375
-          520)
+          456)
         inherited Label_VideoSize: TLabel
           Width = 50
           Height = 13
@@ -115,12 +115,10 @@ object Form_Main: TForm_Main
           ExplicitHeight = 13
         end
         inherited PaintBox_Video: TPaintBox
-          Top = 31
-          Width = 337
-          Height = 332
-          ExplicitTop = 31
-          ExplicitWidth = 337
-          ExplicitHeight = 332
+          Width = 367
+          Height = 500
+          ExplicitWidth = 367
+          ExplicitHeight = 499
         end
       end
     end
@@ -128,17 +126,16 @@ object Form_Main: TForm_Main
   object Panel_Right: TPanel
     Left = 384
     Top = 0
-    Width = 459
-    Height = 626
+    Width = 380
+    Height = 562
     Align = alClient
     TabOrder = 1
-    ExplicitWidth = 380
     ExplicitHeight = 542
     inline Frame_Video2: TFrame1
       Left = 1
       Top = 1
-      Width = 457
-      Height = 624
+      Width = 378
+      Height = 560
       Align = alClient
       TabOrder = 0
       ExplicitLeft = 1
@@ -146,10 +143,10 @@ object Form_Main: TForm_Main
       ExplicitWidth = 378
       ExplicitHeight = 540
       inherited Panel_Top: TPanel
-        Width = 457
+        Width = 378
         ExplicitWidth = 374
         DesignSize = (
-          457
+          378
           104)
         inherited Label_Cameras: TLabel
           Width = 52
@@ -176,7 +173,7 @@ object Form_Main: TForm_Main
           ExplicitHeight = 13
         end
         inherited Bevel1: TBevel
-          Width = 332
+          Width = 253
         end
         inherited ComboBox_Cams: TComboBox
           Height = 21
@@ -192,13 +189,13 @@ object Form_Main: TForm_Main
         end
       end
       inherited Panel_Bottom: TPanel
-        Width = 457
-        Height = 520
+        Width = 378
+        Height = 456
         ExplicitWidth = 374
         ExplicitHeight = 435
         DesignSize = (
-          457
-          520)
+          378
+          456)
         inherited Label_VideoSize: TLabel
           Width = 50
           Height = 13
@@ -218,12 +215,10 @@ object Form_Main: TForm_Main
           ExplicitHeight = 13
         end
         inherited PaintBox_Video: TPaintBox
-          Top = 31
-          Width = 340
-          Height = 332
-          ExplicitTop = 31
-          ExplicitWidth = 340
-          ExplicitHeight = 332
+          Width = 378
+          Height = 500
+          ExplicitWidth = 374
+          ExplicitHeight = 499
         end
       end
     end
