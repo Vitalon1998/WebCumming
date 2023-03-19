@@ -80,7 +80,7 @@ type
     procedure InitFrame;
     procedure Stop;
     PROCEDURE Close;
-    procedure SaveImage;
+    procedure SaveImage(index: integer; fileName: string);
   end;
 
 implementation
@@ -594,18 +594,17 @@ begin
     end;
 end;
 
-procedure TFrame1.SaveImage;
+procedure TFrame1.SaveImage(index: integer; fileName: string);
 VAR
   BMP : TBitmap;
 begin
   BMP := TBitmap.Create;
-  BMP.Assign(VideoBMP[0]);
+  BMP.Assign(VideoBMP[index]);
 
       try
-        // Will not save the flipping. Sorry, I'm a lazy guy...
-        BMP.SaveToFile('C:\\Users\\User\\Desktop\\Delphi\\Screen\\Fisting.bmp');
+        BMP.SaveToFile(fileName);
       except
-        MessageDlg('Could not save file C:\\Users\\User\\Desktop\\Delphi\\Screen\\Fisting.bmp!', mterror, [mbOK], 0);
+        MessageDlg('Could not save file' + fileName, mterror, [mbOK], 0);
       end;
 
   BMP.Free;

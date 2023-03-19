@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Classes, Controls, Forms, ExtCtrls, Frame_Video, Menus,
-  StdCtrls, Vcl.Graphics, System.SysUtils;
+  StdCtrls, Vcl.Graphics;
 
 
 type
@@ -76,11 +76,8 @@ begin
 end;
 
 procedure TForm_Main.SaveScreenButClick(Sender: TObject);
-var nowDate:string;
 begin
-  nowDate := FormatDateTime('dd.MM.yyyy_hh.mm.ss.zz', Now);
-  Frame_Video1.SaveImage(0, 'C:\\Users\\User\\Desktop\\Delphi\\Screen\\FistingAss_'+nowDate+'.bmp');
-  Frame_Video2.SaveImage(0, 'C:\\Users\\User\\Desktop\\Delphi\\Screen\\FistingSlaves_'+nowDate+'.bmp');
+  Frame_Video1.SaveImage;
 end;
 
 procedure TForm_Main.Splitter1Moved(Sender: TObject);
