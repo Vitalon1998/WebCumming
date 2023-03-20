@@ -23,6 +23,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FormResize(Sender: TObject);
     procedure SaveScreenButClick(Sender: TObject);
+
   private
     { Private declarations }
     SplitterRatio : double;
@@ -39,12 +40,6 @@ implementation
 
 {$R *.dfm}
 
-
-
-
-
-
-
 procedure TForm_Main.FormCloseQuery(Sender: TObject;
   var CanClose: Boolean);
 begin
@@ -54,8 +49,6 @@ begin
   Frame_Video2.Stop;
   Screen.Cursor := crdefault;
 end;
-
-
 
 procedure TForm_Main.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
@@ -67,7 +60,7 @@ procedure TForm_Main.FormShow(Sender: TObject);
 begin
   Frame_Video1.InitFrame;
   Frame_Video2.InitFrame;
-  Frame_Video2.Label_Cameras.Caption := 'Camera #2';
+  Frame_Video2.Label_Cameras.Caption := 'Камера #2';
 end;
 
 procedure TForm_Main.Quit1Click(Sender: TObject);

@@ -27,21 +27,15 @@ type
     Panel_Bottom: TPanel;
     Label_VideoSize: TLabel;
     Label_fps: TLabel;
-    Label2: TLabel;
     PaintBox_Video: TPaintBox;
     SpeedButton_RunVideo: TSpeedButton;
-    SpeedButton_Pause: TSpeedButton;
     SpeedButton_Stop: TSpeedButton;
     SpeedButton_VidSettings: TSpeedButton;
     SpeedButton_VidSize: TSpeedButton;
     Label3: TLabel;
-    SpeedButton1: TSpeedButton;
-    Label4: TLabel;
-    Bevel1: TBevel;
     procedure Updatelistofcameras1Click(Sender: TObject);
     procedure ComboBox1Change(Sender: TObject);
     procedure SpeedButton_RunVideoClick(Sender: TObject);
-    procedure SpeedButton_PauseClick(Sender: TObject);
     procedure SpeedButton_StopClick(Sender: TObject);
     procedure SpeedButton_VidSettingsClick(Sender: TObject);
     procedure SpeedButton_VidSizeClick(Sender: TObject);
@@ -107,7 +101,7 @@ begin
       SpeedButton_RunVideo.Enabled := true;
     end
     else begin
-      ComboBox_Cams.items.add('No cameras found.');
+      ComboBox_Cams.items.add('Камеры не найдены.');
       SpeedButton_RunVideo.Enabled := false;
     end;
 end;
@@ -267,7 +261,6 @@ begin
         else ModeBMP.assign(VideoBMP[VideoBMPIndex]);
       END; {case}
       PaintBox_Video.Canvas.Draw(0, 0, ModeBMP);
-      Label2.Caption := 'Diff-Ratio: ' + FloatToStrF(DiffRatio*100, ffFixed, 16, 3) + '%';
       // Surveillance
       IF (DiffRatio > 0.03/100) and (ComboBox_DisplayMode.ItemIndex = 5) THEN
         BEGIN
@@ -407,7 +400,6 @@ begin
 end;
 
 
-
 procedure TFrame1.CleanPaintBoxVideo;
 begin
   PaintBox_Video.Canvas.Brush.Color := Color;
@@ -415,13 +407,11 @@ begin
 end;
 
 
-
 PROCEDURE TFrame1.Stop;
 BEGIN
   IF SpeedButton_Stop.Enabled then
     SpeedButton_StopClick(nil);
 END;
-
 
 
 PROCEDURE TFrame1.Close;
@@ -442,7 +432,7 @@ end;
 procedure TFrame1.ComboBox1Change(Sender: TObject);
 begin
   VideoImage.SetResolutionByIndex(Combobox1.itemIndex);
-  Label_VideoSize.Caption := 'Video size ' + intToStr(VideoImage.VideoWidth) + ' x ' + IntToStr(VideoImage.VideoHeight);
+  Label_VideoSize.Caption := 'Разрешение видео ' + intToStr(VideoImage.VideoWidth) + ' x ' + IntToStr(VideoImage.VideoHeight);
 end;
 
 procedure TFrame1.SpeedButton_RunVideoClick(Sender: TObject);
@@ -466,7 +456,6 @@ begin
         SpeedButton_VidSettings.Enabled   := true;
         SpeedButton_VidSize.Enabled       := true;
         SpeedButton_Stop.Enabled     := true;
-        SpeedButton_Pause.Enabled    := true;
         SpeedButton_RunVideo.enabled := false;
         exit;
       end;
@@ -485,16 +474,15 @@ begin
 
   IF i <> 0 then
     begin
-      MessageDlg('Could not start video (Error '+IntToStr(i)+')', mtError, [mbOK], 0);
+      MessageDlg('Не удалось запустить видео (Ошибка '+IntToStr(i)+')', mtError, [mbOK], 0);
       exit;
     end;
-  Label_VideoSize.Caption := 'Video size ' + intToStr(VideoImage.VideoWidth) + ' x ' + IntToStr(VideoImage.VideoHeight);
+  Label_VideoSize.Caption := 'Разрешение видео ' + intToStr(VideoImage.VideoWidth) + ' x ' + IntToStr(VideoImage.VideoHeight);
   fFrameCnt := 0;
 
   SpeedButton_VidSettings.Enabled   := true;
   SpeedButton_VidSize.Enabled       := true;
   SpeedButton_Stop.Enabled     := true;
-  SpeedButton_Pause.Enabled    := true;
   SpeedButton_RunVideo.enabled := false;
   ComboBox_Cams.Enabled        := false;
 
@@ -528,16 +516,6 @@ begin
     END;
 end;
 
-procedure TFrame1.SpeedButton_PauseClick(Sender: TObject);
-begin
-  IF assigned(VideoImage) then
-    VideoImage.VideoPause;
-  SpeedButton_VidSettings.Enabled := false;
-  SpeedButton_VidSize.Enabled     := false;
-  SpeedButton_Stop.Enabled        := true;
-  SpeedButton_Pause.Enabled       := false;
-  SpeedButton_RunVideo.enabled    := true;
-end;
 
 procedure TFrame1.SpeedButton_StopClick(Sender: TObject);
 begin
@@ -547,9 +525,7 @@ begin
   Application.ProcessMessages;
   VideoImage.VideoStop;
   Screen.Cursor := crDefault;
-  SpeedButton_Stop.Enabled := false;
   SpeedButton_RunVideo.Enabled := true;
-  SpeedButton_Pause.Enabled    := false;
   ComboBox_Cams.Enabled   := true;
   UpdateCamList;
 end;
@@ -566,7 +542,7 @@ begin
     begin
       CleanPaintBoxVideo;
       VideoImage.ShowProperty_Stream;
-      Label_VideoSize.Caption := 'Video size ' + intToStr(VideoImage.VideoWidth) + ' x ' + IntToStr(VideoImage.VideoHeight);
+      Label_VideoSize.Caption := 'Разрешение видео ' + intToStr(VideoImage.VideoWidth) + ' x ' + IntToStr(VideoImage.VideoHeight);
     end;
 end;
 
@@ -604,7 +580,7 @@ begin
       try
         BMP.SaveToFile(fileName);
       except
-        MessageDlg('Could not save file' + fileName, mterror, [mbOK], 0);
+        MessageDlg('Не удалось сохранить файл' + fileName, mterror, [mbOK], 0);
       end;
 
   BMP.Free;
