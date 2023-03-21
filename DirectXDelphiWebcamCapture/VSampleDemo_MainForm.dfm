@@ -2,8 +2,8 @@ object Form_Main: TForm_Main
   Left = 392
   Top = 223
   Caption = 'Web'
-  ClientHeight = 561
-  ClientWidth = 760
+  ClientHeight = 560
+  ClientWidth = 756
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,7 +22,7 @@ object Form_Main: TForm_Main
     Left = 377
     Top = 0
     Width = 10
-    Height = 561
+    Height = 560
     OnMoved = Splitter1Moved
     ExplicitHeight = 562
   end
@@ -30,21 +30,21 @@ object Form_Main: TForm_Main
     Left = 0
     Top = 0
     Width = 377
-    Height = 561
+    Height = 560
     Align = alLeft
     TabOrder = 0
-    ExplicitHeight = 562
+    ExplicitHeight = 561
     inline Frame_Video1: TFrame1
       Left = 1
       Top = 1
       Width = 375
-      Height = 559
+      Height = 558
       Align = alClient
       TabOrder = 0
       ExplicitLeft = 1
       ExplicitTop = 1
       ExplicitWidth = 375
-      ExplicitHeight = 560
+      ExplicitHeight = 559
       inherited Panel_Top: TPanel
         Width = 375
         ExplicitWidth = 375
@@ -114,12 +114,12 @@ object Form_Main: TForm_Main
       end
       inherited Panel_Bottom: TPanel
         Width = 375
-        Height = 455
+        Height = 454
         ExplicitWidth = 375
-        ExplicitHeight = 455
+        ExplicitHeight = 454
         DesignSize = (
           375
-          455)
+          454)
         inherited Label_VideoSize: TLabel
           Width = 96
           Height = 13
@@ -138,7 +138,7 @@ object Form_Main: TForm_Main
         end
         inherited PaintBox_Video: TPaintBox
           Width = 367
-          Height = 499
+          Height = 498
           ExplicitWidth = 367
           ExplicitHeight = 499
         end
@@ -148,26 +148,26 @@ object Form_Main: TForm_Main
   object Panel_Right: TPanel
     Left = 387
     Top = 0
-    Width = 373
-    Height = 561
+    Width = 369
+    Height = 560
     Align = alClient
     TabOrder = 1
-    ExplicitWidth = 377
-    ExplicitHeight = 562
+    ExplicitWidth = 373
+    ExplicitHeight = 561
     inline Frame_Video2: TFrame1
       Left = 1
       Top = 1
-      Width = 371
-      Height = 559
+      Width = 367
+      Height = 558
       Align = alClient
       TabOrder = 0
       ExplicitLeft = 1
       ExplicitTop = 1
-      ExplicitWidth = 375
-      ExplicitHeight = 560
+      ExplicitWidth = 371
+      ExplicitHeight = 559
       inherited Panel_Top: TPanel
-        Width = 371
-        ExplicitWidth = 371
+        Width = 367
+        ExplicitWidth = 367
         inherited Label_Cameras: TLabel
           Width = 55
           Height = 13
@@ -226,13 +226,13 @@ object Form_Main: TForm_Main
         end
       end
       inherited Panel_Bottom: TPanel
-        Width = 371
-        Height = 455
-        ExplicitWidth = 371
-        ExplicitHeight = 455
+        Width = 367
+        Height = 454
+        ExplicitWidth = 367
+        ExplicitHeight = 454
         DesignSize = (
-          371
-          455)
+          367
+          454)
         inherited Label_VideoSize: TLabel
           Width = 96
           Height = 13
@@ -250,8 +250,8 @@ object Form_Main: TForm_Main
           ExplicitHeight = 13
         end
         inherited PaintBox_Video: TPaintBox
-          Width = 371
-          Height = 499
+          Width = 367
+          Height = 498
           ExplicitWidth = 374
           ExplicitHeight = 499
         end
@@ -272,5 +272,15 @@ object Form_Main: TForm_Main
     ParentFont = False
     TabOrder = 2
     OnClick = SaveScreenButClick
+  end
+  object Panel1: TPanel
+    Left = 336
+    Top = 8
+    Width = 35
+    Height = 27
+    Caption = '-'
+    Color = clGradientActiveCaption
+    ParentBackground = False
+    TabOrder = 3
   end
 end

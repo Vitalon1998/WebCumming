@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Classes, Controls, Forms, ExtCtrls, Frame_Video, Menus,
-  StdCtrls, Vcl.Graphics, System.SysUtils;
+  StdCtrls, Vcl.Graphics, System.SysUtils, DBOperator, ConvertProductNum;
 
 
 type
@@ -15,6 +15,7 @@ type
     Panel_Right: TPanel;
     Frame_Video2: TFrame1;
     SaveScreenBut: TButton;
+    Panel1: TPanel;
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormShow(Sender: TObject);
